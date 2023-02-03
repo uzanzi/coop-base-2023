@@ -1,13 +1,16 @@
 <script setup>
+import Header from "./components/Header.vue";
+import {useSessionStore} from "./stores/session.js";
+import {useRouter, useRoute} from "vue-router";
+provide('router', useRouter())
+provide('route', useRoute())
+provide('session', useSessionStore())
+let session = useSessionStore()
+session.isValid()
 </script>
 
 <template>
-  <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
-  </nav>
- 
-
+  <Header/>
   <RouterView />
 </template>
 

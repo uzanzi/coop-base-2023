@@ -8,8 +8,8 @@ let session = useSessionStore()
 let user = useUserStore()
 
 let member = reactive({
-  email: 'ugo.zanzi@gmail.com',
-  password: 'motdepasse123'
+  email: '',
+  password: ''
 })
 function validationFormulaire(){
   api.post('members/signin', {
@@ -35,10 +35,11 @@ function validationFormulaire(){
           <input type="email" class="form-control" v-model="member.email" aria-describedby="emailHelp" placeholder="Email">
         </div>
         <div class="form-group my-2">
-          <label class="p-2">Password</label>
+          <label class="p-2">Mot de passe</label>
           <input type="password" class="form-control" v-model="member.password" placeholder="Password">
         </div>
         <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+        <small><router-link to="inscription">S'inscrire</router-link></small>
       </form>
     </main>
   </main>

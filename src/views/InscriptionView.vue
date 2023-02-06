@@ -5,9 +5,9 @@ const router = useRouter()
 
 
 let member = reactive({
-  fullname: 'ZANZI Ugo',
-  email: 'ugo.zanzi@gmail.com',
-  password: 'motdepasse123'
+  fullname: '',
+  email: '',
+  password: ''
 })
 
 function validationFormulaire(){
